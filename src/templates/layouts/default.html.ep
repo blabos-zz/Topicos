@@ -1,5 +1,28 @@
 <!DOCTYPE html>
 <html>
-  <head><title><%= title %></title></head>
-  <body><%= content %></body>
+    <head>
+        <title>Morcegão Livros Online</title>
+        
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    
+    <body>
+        <div id="container">
+            <div id="header">
+                <%= include 'header' %>
+            </div>
+            
+            <div id="navigation">
+                <%= include 'navigation' %>
+            </div>
+            
+            <div id="content">
+                <%= content %>
+            </div>
+            
+            <div id="footer">
+                <%= include 'footer' %>
+            </div>
+        </div>
+    </body>
 </html>

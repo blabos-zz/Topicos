@@ -1,0 +1,5 @@
+<ul>
+    <li><a href="<%= url_for('/') %>">Início</a></li>
+    |
+    <li><a href="<%= url_for('/sobre') %>">A Empresa</a></li>
+</ul>
