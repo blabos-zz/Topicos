@@ -3,5 +3,18 @@
     |
     <li><a href="<%= url_for('/sobre') %>">A Empresa</a></li>
     |
-    <li><a href="<%= url_for('/cadastre-se') %>">Cadastre-se</a></li>
+    
+    % my $user = session 'user';
+    % if ( defined $user ) {
+        % if ( $user->{type} == 1 ) {
+            <li><a href="<%= url_for('/admin') %>">Admin</a></li>
+            |
+        % }
+        <li><a href="<%= url_for('/logout') %>">Sair</a></li>
+    % }
+    % else {
+        <li><a href="<%= url_for('/cadastre-se') %>">Cadastre-se</a></li>
+        |
+        <li><a href="<%= url_for('/login') %>">Login</a></li>
+    % }
 </ul>

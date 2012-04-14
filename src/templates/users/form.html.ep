@@ -1,0 +1,45 @@
+% layout 'default';
+
+<div id="adm_nav">
+    <%= include '/admin/adm_nav' %>
+</div>
+
+<div id="adm_cont">
+    <h2>Edição de Perfis</h2>
+    
+    <%= include 'msg'; %>
+    
+    <form
+        action="<%= url_for('/admin/clientes/save') %>"
+        method="post"
+    >
+        <fieldset>
+            <input class="edit" type="hidden" name="user_id" value="<%= $user->{user_id} %>">
+            <input class="edit" type="hidden" name="target" value="edit">
+            
+            <label>
+                Email: <input class="edit" type="text" name="email" value="<%= $user->{email} %>">
+            </label>
+            
+            <label>
+                Senha: <input class="edit" type="password" name="password" value="">
+            </label>
+            
+            <label>
+                Nome: <input class="edit" type="text" name="full_name" value="<%= $user->{full_name} %>">
+            </label>
+            
+            <label>
+                Status: <input class="edit" type="text" name="status" value="<%= $user->{status} %>">
+            </label>
+            
+            <label>
+                Tipo: <input class="edit" type="text"  name="type" value="<%= $user->{type}%>">
+            </label>
+            
+            <label>
+                <input class="submit" type="submit" name="bt_sub" value="Salvar">
+            </label>
+        </fieldset>
+    </form>
+</div>

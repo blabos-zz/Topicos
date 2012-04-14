@@ -1,14 +1,14 @@
 % layout 'default';
 
 
-<h1>A Empresa</h1>
+<h2>A Empresa</h2>
 
 <p>
     A empresa Morecegão Livros Online é a líder no mercado de vendas de
     livros online...
 </p>
 
-<h2>Nossos Serviços</h2>
+<h3>Nossos Serviços</h3>
 
 <p>
     Vendemos Livros! Compre! Compre!

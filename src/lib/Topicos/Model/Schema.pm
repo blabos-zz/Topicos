@@ -2,6 +2,7 @@ package Topicos::Model::Schema;
 
 use strict;
 use warnings;
+use utf8;
 
 use parent 'DBIx::Class::Schema';
 

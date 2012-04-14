@@ -1,11 +1,23 @@
 % layout 'default';
 
-<h1>Cadastre-se</h1>
+<h2>Cadastre-se</h2>
+
+<%= include 'msg'; %>
 
 <form action="<%= url_for('/cadastre-se') %>" method="post">
-    Email: <input type="text" name="email" />
-    <br />
-    Senha: <input type="text" name="password" />
-    <br />
-    <input type="submit" name="signup_submit" value="Cadastrar" />
+    <fieldset>
+        <input type="hidden" name="target" value="signup">
+        
+        <label>
+            Email: <input type="text" name="email" />
+        </label>
+        
+        <label>
+            Senha: <input type="text" name="password" />
+        </label>
+        
+        <label>
+            <input type="submit" name="signup_submit" value="Cadastrar" />
+        </label>
+    </fieldset>
 </form>

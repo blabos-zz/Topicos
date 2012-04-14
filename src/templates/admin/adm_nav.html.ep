@@ -1,0 +1,17 @@
+<ul>
+    <li>
+        <a href="<%= url_for('/admin/clientes') %>">Clientes</a>
+    </li>
+    
+    <li>
+        <ul>
+            <li>
+                <a href="<%= url_for('/admin/clientes/novo') %>">Novo</a>
+            </li>
+        </ul>
+    </li>
+    
+    <li>
+        <a href="<%= url_for('/admin/livros') %>">Acervo</a>
+    </li>
+</ul>

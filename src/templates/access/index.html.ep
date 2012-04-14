@@ -1,0 +1,17 @@
+% layout 'default';
+
+<div id="login">
+    <%= include 'msg'; %>
+    
+    <form action="<%= url_for('/login') %>" method="post">
+        <fieldset>
+            <input type="hidden" name="target" value="<%= $target %>">
+            <label>Email: <input type="text" name="email" /></label>
+            <label>Password: <input type="password" name="password" /></label>
+            <label>
+                <input type="submit" value="Sing In" class="submit" />
+                <a href="#">Esqueci a senha</a>
+            </label>
+        </fieldset>
+    </form>
+</div>

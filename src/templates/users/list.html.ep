@@ -1,0 +1,35 @@
+% layout 'default';
+
+<div id="adm_nav">
+    <%= include '/admin/adm_nav' %>
+</div>
+
+<div id="adm_cont">
+    <h2>Usuários</h2>
+    
+    <%= include 'msg'; %>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Status</th>
+                <th>Tipo</th>
+                <th colspan="2">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            % foreach my $user ( @{ $users } ) {
+                <tr>
+                    <td><%= $user->{full_name} %></td>
+                    <td><%= $user->{email} %></td>
+                    <td><%= $user->{status} %></td>
+                    <td><%= $user->{type} %></td>
+                    <td><a href="<%= url_for('/admin/clientes/edit/' . $user->{user_id}) %>">Editar</a></td>
+                    <td><a href="<%= url_for('/admin/clientes/del/' . $user->{user_id}) %>">Deletar</a></td>
+                </tr>
+            % }
+        </tbody>
+    </table>
+</div>

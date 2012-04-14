@@ -2,6 +2,7 @@ package Topicos::Model;
 
 use strict;
 use warnings;
+use utf8;
 
 use Topicos::Model::Schema;
 
